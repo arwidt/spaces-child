@@ -66,9 +66,33 @@
 					<div id="secondary-menu" class="sf-menu main-menu">
 						<ul class="nj_bottommenu">
 							<?php if ( is_singular('post') OR is_singular('portfolio') OR is_singular('product') && !is_singular('page') ): ?>
-							<li class="page_item previous">
 								<?php
-									$link = get_previous_post_link(__('%link', 'bean'), __('', 'bean'));
+								$link = get_previous_post_link(__('%link', 'bean'), __('', 'bean'));
+								if ($link) {
+									echo '<li class="page_item previous">';
+									$xml = simplexml_load_string($link);
+									$list = $xml->xpath("//@href");
+
+									$preparedUrls = array();
+									foreach ($list as $item) {
+										$item = parse_url($item);
+										$preparedUrls[] = $item['scheme'] . '://' . $item['host'] . $item["path"];
+									}
+
+									echo "<a href='" . $preparedUrls[0] . "' target='_top'>Previous</a>";
+									echo '</li>';
+								}
+								?>
+							<?php endif; ?>
+							<li class="page_item page-item-105">
+								<a href="http://nilsjohnnyingmar.se/">Home</a>
+							</li>
+							<?php if ( is_singular('post') OR is_singular('portfolio') OR is_singular('product') && !is_singular('page') ): ?>
+								<?php
+								$link = get_next_post_link(__('%link', 'bean'), __('', 'bean'));
+								if ($link) {
+									echo '<li class="page_item next">';
+
 									$xml = simplexml_load_string($link);
 									$list = $xml->xpath("//@href");
 
@@ -78,29 +102,10 @@
 										$preparedUrls[] = $item['scheme'] . '://' .  $item['host'] . $item["path"];
 									}
 
-									echo "<a href='".$preparedUrls[0]."' target='_top'>Previous</a>";
-								?>
-							</li>
-							<?php endif; ?>
-							<li class="page_item page-item-105">
-								<a href="http://nilsjohnnyingmar.se/">Home</a>
-							</li>
-							<?php if ( is_singular('post') OR is_singular('portfolio') OR is_singular('product') && !is_singular('page') ): ?>
-							<li class="page_item next">
-								<?php
-								$link = get_next_post_link(__('%link', 'bean'), __('', 'bean'));
-								$xml = simplexml_load_string($link);
-								$list = $xml->xpath("//@href");
-
-								$preparedUrls = array();
-								foreach($list as $item) {
-									$item = parse_url($item);
-									$preparedUrls[] = $item['scheme'] . '://' .  $item['host'] . $item["path"];
+									echo "<a href='".$preparedUrls[0]."' target='_top'>Next</a>";
+									echo '</li>';
 								}
-
-								echo "<a href='".$preparedUrls[0]."' target='_top'>Next</a>";
 								?>
-							</li>
 							<?php endif; ?>
 						</ul>
 					</div>

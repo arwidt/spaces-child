@@ -176,7 +176,7 @@ $portfolios = new WP_Query($args);
 		$i == 49) ? 'masonry-std' : 'masonry-std2';
 		
 		//WE ARE PULLING THE MASONRY PORTFOLIO LOOP HERE SO THAT THE $1 VALUE WILL PULL MULTIPLE LOOPS
-		if ( $masonry == true ) 
+		if ( $masonry == true )
 		{ 	
 			if ( ( function_exists('has_post_thumbnail')) && (has_post_thumbnail()) ) { ?>
 					

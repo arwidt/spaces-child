@@ -103,7 +103,7 @@ if ($portfolio_layout != 'fullscreen') {  ?>
 		
 			<ul class="stacked <?php if ($gallery_layout == 'portfolio-lightbox') { echo ' lb-layout';} if ($portfolio_content_display == 'off') { echo ' no-content';} ?>">
 				
-				<li><?php get_template_part( 'content', 'portfolio-media' ); ?></li>
+<!--				<li>--><?php //get_template_part( 'content', 'portfolio-media' ); ?><!--</li>-->
 				
 				<?php if ( !post_password_required() ) { // START PASSWORD PROTECTED	?>
 

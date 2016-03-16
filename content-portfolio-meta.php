@@ -50,7 +50,7 @@ if ($portfolio_layout == 'default') {
 
 	<div class="portfolio-wrap <?php if ($portfolio_layout == 'grid' OR $portfolio_layout == 'masonry') { echo 'gallery-grid'; } ?>">
 
-		<?php if ($portfolio_layout == 'fullwidth' OR $portfolio_layout == 'edge' OR $portfolio_layout == 'fullscreen' OR $portfolio_layout == 'grid' OR $portfolio_layout == 'masonry') { echo '<div class="eight columns sidebar-right">'; } ?>
+		<?php if ($portfolio_layout == 'fullwidth' OR $portfolio_layout == 'edge' OR $portfolio_layout == 'fullscreen' OR $portfolio_layout == 'grid' OR $portfolio_layout == 'masonry') { echo '<div class="twelve columns sidebar-right">'; } ?>
 
 			<?php if ($portfolio_layout == 'std') { ?>
 				<?php if( get_theme_mod( 'portfolio_likes' ) == true) { ?>
@@ -74,7 +74,7 @@ if ($portfolio_layout == 'default') {
 
 		<?php if ($portfolio_layout != 'std') { echo '</div>'; } ?>
 
-		<?php if ($portfolio_layout == 'fullwidth' OR $portfolio_layout == 'edge' OR $portfolio_layout == 'fullscreen' OR $portfolio_layout == 'grid' OR $portfolio_layout == 'masonry') { echo '<div class="four columns portfolio-full-meta">'; } ?>
+		<?php if ($portfolio_layout == 'fullwidth' OR $portfolio_layout == 'edge' OR $portfolio_layout == 'fullscreen' OR $portfolio_layout == 'grid' OR $portfolio_layout == 'masonry') { echo '<div class="twelve columns portfolio-full-meta">'; } ?>
 
 			<ul class="entry-meta clearfix subtext">
 						

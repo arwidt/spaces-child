@@ -27,9 +27,9 @@ var gulp_sass = (function() {
                 };
 
                 return gulp.src(sourceFile)
-                    //.pipe(plumber({
-                    //    errorHandler: onError
-                    //}))
+                    .pipe(plumber({
+                        errorHandler: onError
+                    }))
                     //.pipe(sourcemaps.init())
                     .pipe(sass({style: 'compact', errLogToConsole: true}))
                     .pipe(autoprefixer())
