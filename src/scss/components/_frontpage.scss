@@ -1,0 +1,217 @@
+
+html, body, #theme-wrapper {
+    background: black;
+}
+
+p, h1, h2, h3, h4, h5, span, a {
+    font-size: 14px;
+}
+
+body {
+    color: #FFF;
+}
+
+footer {
+    padding-left: 0;
+    a {
+        color: #999;
+    }
+    a:hover {
+        color: #FFF;
+    }
+    text-align: left;
+}
+
+header ul li {
+    a {
+        color: #999;
+    }
+    a:hover {
+        color: #FFF;
+    }
+}
+
+.site-description p {
+    font-size: 14px;
+}
+
+#header {
+    padding-left: 0;
+    text-align: left;
+}
+
+h1 {
+    color: white;
+
+    &:hover {
+        color: darken(white, 20%);
+    }
+}
+
+.mean-bar {
+    display: none !important;
+}
+
+.masonry-item .overlay .post-inner h1 {
+    background-color: transparent;
+    padding: 0;
+}
+
+.masonry-item .overlay a {
+    color: white;
+}
+
+
+.post-inner a p {
+    font-size: 14px;
+}
+
+//.post-inner p, .site-description {
+//    color: #FFF !important;
+//    text-decoration: none !important;
+//}
+
+
+.masonry-item .wrap:hover .overlay-arrow {
+    display: none;
+}
+//
+//.post-inner h1 {
+//    background: none !important;
+//    padding: 0 !important;
+//}
+//
+//p a {
+//    border-bottom-width: 1px !important;
+//    border-bottom-color: #000 !important;
+//}
+//
+//p {
+//    font-size: 14px !important;
+//    line-height: 1.6em !important;
+//}
+//
+//.portfolio-wrap h1 {
+//    color: #000 !important;
+//}
+//
+
+// Ta bort förstoringsglaset på bilder.
+.masonry-item:hover::after {
+    display: none;
+}
+
+li.masonry-item.wrap {
+    display: none;
+}
+
+.masonry-item:active::before {
+    content: "";
+    background: black;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.masonry-item .wrap:hover img {
+    opacity: 1;
+}
+
+.fancybox-overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.fancybox-nav {
+    span {
+        display: none;
+    }
+}
+
+.entry-content {
+    p {
+        font-size: 14px;
+    }
+}
+
+.entry-meta {
+    margin-top: 0 !important;
+}
+
+#footer {
+    p {
+        font-size: 14px;
+    }
+}
+
+//#footer p, #footer a {
+//    color: #FFF !important;
+//}
+//
+//#footer a:hover {
+//    color: #707070 !important;
+//}
+
+.nj_bottommenu {
+    display: block;
+    position: relative;
+    //width: 100%;
+    //.page_item {
+    //    &.next {
+    //        position: absolute;
+    //        right: 0;
+    //    }
+    //
+    //    &.previous {
+    //        position: absolute;
+    //        left: 0;
+    //    }
+    //}
+    //@include breakpoint(900px) {
+    //
+    //    width: auto;
+    //    .page_item {
+    //        &.next {
+    //            position: relative;
+    //        }
+    //        &.previous {
+    //            position: relative;
+    //        }
+    //    }
+    //}
+}
+
+.masonry-item {
+    .portfolio-wrap {
+        background: transparent;
+        padding: 0;
+    }
+}
+
+.row_std {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: 60px;
+}
+
+.masonry-item {
+    .nji-frontpage_link {
+        position: relative;
+
+        //transition: border .1s;
+        //&:hover {
+        //    border: 4px solid white;
+        //}
+    }
+}
+
+.single-portfolio ul.stacked li {
+    &::after {
+        display: none;
+    }
+}
